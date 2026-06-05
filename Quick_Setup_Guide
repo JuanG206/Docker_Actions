@@ -1,0 +1,54 @@
+Quick Setup Guide
+
+1. Clone & Configure the Script
+Download the script file into your current project folder containing your targeted application Dockerfile. Open the script file with a text editor (vim, nano) and configure the header setup variables according to your stack requirements:
+Bash
+
+IMAGE_NAME="your-custom-image"
+CONTAINER_NAME="your-custom-container"
+DOCKER_HUB_USER="your_dockerhub_account"
+PORT=8080
+
+2. Update System Permissions
+To allow shell execution rights inside your Unix environment, assign the executable bits to the asset:
+
+Bash
+
+chmod +x docker-menu.sh
+
+3. Execution
+Launch the interactive orchestrator console using your preferred terminal interface:
+
+Bash
+
+./docker-menu.sh
+
+ Enterprise Workflow Application Example
+This operational tool serves as a secure bridge for Decoupled Architecture Releases. Developers can maintain private text structures on standard versioning spaces (e.g., private GitHub repositories), while utilizing this workflow automation client to push final, built immutable binaries over Docker Hub registries straight to runtime providers (e.g., Render, AWS, GCP).
+This workflow pattern insulates master source repositories from infrastructure tokens, minimizing exploit surfaces in multi-tenant environments.
+
+---
+
+###  Pasos para publicarlo en GitHub ahora mismo:
+1. Ve a tu cuenta de GitHub y crea un nuevo repositorio público llamado, por ejemplo: `docker-management-tool` o `smart-docker-cli`.
+
+2. En tu computadora local (fuera de la carpeta de tu portafolio, crea una carpeta limpia para este proyecto):
+
+```bash
+   mkdir docker-cli-tool && cd docker-cli-tool
+   git init
+
+3. Crea y guarda los dos archivos (docker-menu.sh y README.md).
+
+4. Vincula tu repositorio remoto y sube tu código:
+Bash
+
+git add .
+git commit -m "feat: initial release of smart docker management utility"
+git branch -M main
+git remote add origin https://github.com/JuanG206/tu-repositorio.git
+git push -u origin main
+
+
+¡Y listo! Tendrás una sección de proyectos impecable en GitHub que complementará perfectamente tu perfil profesional. ¡Mucho éxito en tus despliegues!
+
