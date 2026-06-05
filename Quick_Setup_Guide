@@ -1,54 +1,53 @@
-Quick Setup Guide
+# Quick Setup Guide
 
-1. Clone & Configure the Script
-Download the script file into your current project folder containing your targeted application Dockerfile. Open the script file with a text editor (vim, nano) and configure the header setup variables according to your stack requirements:
-Bash
+1. Clone and Configure the Script
+Download the script file into your current project folder containing your targeted application Dockerfile. Open the script file with a text editor and configure the header setup variables according to your stack requirements:
 
-IMAGE_NAME="your-custom-image"
-CONTAINER_NAME="your-custom-container"
-DOCKER_HUB_USER="your_dockerhub_account"
-PORT=8080
+```bash
+# Explicit runtime configuration variables
+DOCKER_IMAGE_NAME="your-custom-image"
+DOCKER_CONTAINER_NAME="your-custom-container"
+DOCKER_REGISTRY_USER="your_dockerhub_account"
+DOCKER_SANDBOX_PORT=8080
 
-2. Update System Permissions
-To allow shell execution rights inside your Unix environment, assign the executable bits to the asset:
+    Update System Permissions
+    To allow shell execution rights inside your Unix environment, assign the executable bits to the asset:
 
 Bash
 
 chmod +x docker-menu.sh
 
-3. Execution
-Launch the interactive orchestrator console using your preferred terminal interface:
+    Execution
+    Launch the interactive orchestrator console using your preferred terminal interface:
 
 Bash
 
 ./docker-menu.sh
 
- Enterprise Workflow Application Example
-This operational tool serves as a secure bridge for Decoupled Architecture Releases. Developers can maintain private text structures on standard versioning spaces (e.g., private GitHub repositories), while utilizing this workflow automation client to push final, built immutable binaries over Docker Hub registries straight to runtime providers (e.g., Render, AWS, GCP).
+Enterprise Workflow Application Context
+
+This operational tool serves as a secure bridge for Decoupled Architecture Releases. Developers can maintain private text structures on standard versioning spaces (such as private GitHub repositories), while utilizing this workflow automation client to push final, built immutable binaries over Docker Hub registries straight to runtime cloud providers (such as Render, AWS, or GCP).
+
 This workflow pattern insulates master source repositories from infrastructure tokens, minimizing exploit surfaces in multi-tenant environments.
+Technical Instructions to Publish Upstream on GitHub
 
----
+    Access your upstream GitHub account interface and create a clean public target repository named smart-docker-orchestrator or docker-lifecycle-utility.
 
-###  Pasos para publicarlo en GitHub ahora mismo:
-1. Ve a tu cuenta de GitHub y crea un nuevo repositorio público llamado, por ejemplo: `docker-management-tool` o `smart-docker-cli`.
+    Initialize an isolated local directory boundary on your development machine host:
 
-2. En tu computadora local (fuera de la carpeta de tu portafolio, crea una carpeta limpia para este proyecto):
+Bash
 
-```bash
    mkdir docker-cli-tool && cd docker-cli-tool
    git init
 
-3. Crea y guarda los dos archivos (docker-menu.sh y README.md).
+    Commit the structural code bases (docker-menu.sh and README.md) straight into your newly generated repository path layout.
 
-4. Vincula tu repositorio remoto y sube tu código:
+    Establish tracking branch linkages and deploy the assets upstream to your remote cloud space:
+
 Bash
 
-git add .
-git commit -m "feat: initial release of smart docker management utility"
-git branch -M main
-git remote add origin https://github.com/JuanG206/tu-repositorio.git
-git push -u origin main
-
-
-¡Y listo! Tendrás una sección de proyectos impecable en GitHub que complementará perfectamente tu perfil profesional. ¡Mucho éxito en tus despliegues!
-
+   git add .
+   git commit -m "feat: initial release of smart docker management utility"
+   git branch -M main
+   git remote add origin git@github.com:JuanG206/your-repository-name.git
+   git push -u origin main
